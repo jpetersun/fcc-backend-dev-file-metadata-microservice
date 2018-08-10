@@ -8,7 +8,7 @@ describe('POST /api/file-metadata', () => {
     request(app)
       .post('/api/file-metadata')
       .attach('testFile', `${__dirname}/sea.jpg`)
-      .end((err, res) => {
+      .then(res => {
         res.status.should.equal(200)
         res.type.should.equal('application/json')
         res.body.name.should.equal('sea.jpg')
@@ -22,7 +22,7 @@ describe('POST /api/file-metadata', () => {
     request(app)
       .post('/api/file-metadata')
       .attach('testFile', `${__dirname}/paul-morris-212014.jpg`)
-      .end((err, res) => {
+      .then(res => {
         res.status.should.equal(400)
         res.type.should.equal('application/json')
         res.body.message.should.equal('File too large')
@@ -36,7 +36,7 @@ describe('POST /api/file-metadata', () => {
     request(app)
       .post('/api/file-metadata')
       .attach('testFile', `${__dirname}/test.txt`)
-      .end((err, res) => {
+      .then(res => {
         res.status.should.equal(200)
         res.type.should.equal('application/json')
         res.body.name.should.equal('test.txt')
