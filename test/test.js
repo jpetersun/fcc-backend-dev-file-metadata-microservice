@@ -15,7 +15,10 @@ describe('POST /api/file-metadata', () => {
         res.body.size.should.equal(190307)
         res.body.type.should.equal('image/jpeg')
         done()
-    })
+      })
+      .catch(err => {
+        console.error(err)
+      })
   })
 
   it('should respond with an error', done => {
@@ -27,6 +30,9 @@ describe('POST /api/file-metadata', () => {
         res.type.should.equal('application/json')
         res.body.message.should.equal('File too large')
         done()
+      })
+      .catch(err => {
+        console.error(err)
       })
   })
 })
@@ -43,6 +49,9 @@ describe('POST /api/file-metadata', () => {
         res.body.type.should.equal('text/plain')
         res.body.size.should.equal(3144)
         done()
+      })
+      .catch(err => {
+        console.error(err)
       })
   })
 })
