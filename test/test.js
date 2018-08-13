@@ -7,7 +7,7 @@ describe('POST /api/file-metadata', () => {
   it('should respond with image file metadata', done => {
     request(app)
       .post('/api/file-metadata')
-      .attach('testFile', `${__dirname}/sea.jpg`)
+      .attach('testFile', `${__dirname}/files/sea.jpg`)
       .then(res => {
         res.status.should.equal(200)
         res.type.should.equal('application/json')
@@ -24,7 +24,7 @@ describe('POST /api/file-metadata', () => {
   it('should respond with an error', done => {
     request(app)
       .post('/api/file-metadata')
-      .attach('testFile', `${__dirname}/paul-morris-212014.jpg`)
+      .attach('testFile', `${__dirname}/files/paul-morris-212014.jpg`)
       .then(res => {
         res.status.should.equal(400)
         res.type.should.equal('application/json')
@@ -41,7 +41,7 @@ describe('POST /api/file-metadata', () => {
   it('should respond with text file metadata', done => {
     request(app)
       .post('/api/file-metadata')
-      .attach('testFile', `${__dirname}/test.txt`)
+      .attach('testFile', `${__dirname}/files/test.txt`)
       .then(res => {
         res.status.should.equal(200)
         res.type.should.equal('application/json')
