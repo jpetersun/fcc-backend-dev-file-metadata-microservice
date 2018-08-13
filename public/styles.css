@@ -163,3 +163,13 @@ pre,
 code {
   background-color: #fafafa;
 }
+
+.form--file-metadata {
+  border: 1px solid grey;
+  padding-top: 1rem;
+  padding-left: 1rem;
+}
+
+.form__input {
+  line-height: 1;
+}

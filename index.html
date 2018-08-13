@@ -9,10 +9,23 @@
 </head>
 <body>
   <h2>FCC File Metadata Microservice</h2>
-  <form action="/api/file-metadata" method="post" enctype="multipart/form-data">
-    <input type="file" name="testFile">
-    <input type="submit" value="Submit">
+  <p>Submit a form object that includes a file upload.
+    When submiting a file, receive the file name, file type, and size in bytes within the JSON response.
+  </p>
+  <h3>Example Usage:</h3>
+  <form class="form--file-metadata" action="/api/file-metadata" method="post" enctype="multipart/form-data">
+    <input class="form__input" type="file" name="testFile">
+    <input class="form__input" type="submit" value="Upload">
   </form>
+  <h3>Example Output:</h3>
+  <pre><code>
+  {
+    name: "sea.jpg",
+    type: "image/jpeg",
+    size: 190307
+  }
+  </code></pre>
+  <h3>Example Error:</h3>
   <pre><code>
   {
     statusCode: 400,
