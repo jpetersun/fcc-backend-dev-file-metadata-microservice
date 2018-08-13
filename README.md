@@ -22,7 +22,7 @@ npm start
 
 Local Demo: `localhost:8000`
 
-Live Demo: https://fcc-file-metadata-jp.glitch.glitch.me/
+Live Demo: https://fcc-file-metadata-microservice-jp.glitch.me/
 
 Example Output:
 ```
