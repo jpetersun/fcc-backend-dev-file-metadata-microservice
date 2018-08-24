@@ -1,7 +1,7 @@
-# FCC Timestamp Microservice
+# FCC File Metadata Microservice
 
 Submit a form object that includes a file upload.
-When submiting something, receive the file name, file type, and size in bytes within the JSON response.
+When submiting a file, receive the file name, file type, and size in bytes within the JSON response.
 
 ### Prerequisites
 
